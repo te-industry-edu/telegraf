@@ -1,4 +1,4 @@
-//go:build windows && (!custom || inputs || inputs.win_w3wp)
+//go:build !custom || inputs || inputs.win_w3wp
 
 package all
 

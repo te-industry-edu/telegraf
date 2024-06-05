@@ -247,7 +247,7 @@ func (w *WinW3wp) Gather(acc telegraf.Accumulator) error {
 	return nil
 }
 
-// init registers the "w3wp" input plugin with the Telegraf inputs registry.
+// init registers the "win_w3wp" input plugin with the Telegraf inputs registry.
 func init() {
-	inputs.Add("w3wp", func() telegraf.Input { return &WinW3wp{} })
+	inputs.Add("win_w3wp", func() telegraf.Input { return &WinW3wp{} })
 }
