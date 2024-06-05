@@ -2,7 +2,7 @@
 
 **Disclaimer:** This plugin only supports Windows.
 
-This plugin collects metrics from Windows IIS App Pool processes. 
+This plugin collects metrics from Windows IIS App Pool processes.
 
 The following metrics are collected:
 
@@ -51,3 +51,19 @@ Each metric is tagged with the application pool name as `appPool`.
 
 ## Example Output
 
+```plaintext
+w3wp_Handle_Count{appPool="MyAppPool",host="myhost.mydomain.com"} 1105 
+w3wp_IO_Read{appPool="MyAppPool",host="myhost.mydomain.com"} 85 
+w3wp_IO_Write{appPool="MyAppPool",host="myhost.mydomain.com"} 6404 
+w3wp_Private_Bytes{appPool="MyAppPool",host="myhost.mydomain.com"} 2.00802304e+08 
+w3wp_Processor_Time{appPool="MyAppPool",host="myhost.mydomain.com"} 0 
+w3wp_Thread_Count{appPool="MyAppPool",host="myhost.mydomain.com"} 34
+w3wp_Working_Set{appPool="MyAppPool",host="myhost.mydomain.com"} 2.17432064e+08
+w3wp_Handle_Count{appPool="MyOtherAppPool",host="myhost.mydomain.com"} 1105 
+w3wp_IO_Read{appPool="MyOtherAppPool",host="myhost.mydomain.com"} 85 
+w3wp_IO_Write{appPool="MyOtherAppPool",host="myhost.mydomain.com"} 6404 
+w3wp_Private_Bytes{appPool="MyOtherAppPool",host="myhost.mydomain.com"} 2.00802304e+08 
+w3wp_Processor_Time{appPool="MyOtherAppPool",host="myhost.mydomain.com"} 0 
+w3wp_Thread_Count{appPool="MyOtherAppPool",host="myhost.mydomain.com"} 34
+w3wp_Working_Set{appPool="MyOtherAppPool",host="myhost.mydomain.com"} 2.17432064e+08
+```
